@@ -1,34 +1,68 @@
+{% extends 'layout.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="sv">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SnabbWebb</title>
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
-</head>
-<body>
-    <header>
-        <img src="{% static 'images/logo.jpg' %}" alt="SnabbWebb Logo">
-        <h1>Välkommen till SnabbWebb123</h1>
-        <p>Vi bygger professionella och prisvärda hemsidor för småföretag!</p>
-    </header>
-    <main>
-        <section>
-            <h2>Vad vi erbjuder</h2>
-            <ul>
-                <li>Responsiva hemsidor</li>
-                <li>Snabb leverans</li>
-                <li>Support och underhåll</li>
-            </ul>
-        </section>
-        <section>
-            <h2>Kontakta oss</h2>
-            <p>Skicka ett mail till <a href="mailto:info@snabbwebb.se">info@snabbwebb.se</a></p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 SnabbWebb. Alla rättigheter förbehållna.</p>
-    </footer>
-</body>
-</html>
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<header>
+    <img src="{% static 'images/logo-circle.png' %}" alt="SnabbWebb Logo">
+    <h1>Välkommen till SnabbWebb</h1>
+    <p>Vi bygger professionella och prisvärda hemsidor som hjälper ditt företag att lyckas online!</p>
+</header>
+
+<section id="services">
+    <hr>
+    <h2>Tjänster</h2>
+    <div>
+        <div>
+            <div>
+                <img src="{% static 'images/basic-service.jpg' %}" alt="Enkel Tjänst">
+                <div>Enkel Tjänst</div>                
+            </div>
+            <p>Enkel Tjänst erbjuder en snabb och prisvärd webbsida med grundläggande funktioner för småföretag.</p>
+        </div>
+        
+        <div>
+            <div>
+                <img src="{% static 'images/premium-service.png' %}" alt="Premium Tjänst">
+                <div>Premium Tjänst</div>                
+            </div>
+            <p>Premium Tjänst erbjuder en skräddarsydd webbsida med avancerade funktioner för professionell närvaro.</p>
+        </div>
+        <div>
+            <div>
+            <img src="{% static 'images/technical-help.png' %}" alt="Tekniskt underhåll">
+            <div>Tekniskt underhåll</div>                
+            </div>
+            <p>Tekniskt Underhåll säkerställer att din webbsida fungerar optimalt med uppdateringar och säkerhetskopior.</p>
+        </div>
+    </div>
+    <hr style="margin-top: 40px;">
+</section>
+
+<section id="templates">
+    <h2>Innovativa Projektexempel</h2>
+
+    <div>
+        <div>
+            <img src="{% static 'images/text.jpg' %}" alt="">
+            <div>Webbsite</div>                
+        </div>
+        <div>
+            <img src="{% static 'images/text.jpg' %}" alt="">
+            <div>Webbsite</div>                
+        </div>
+        <div>
+            <img id="template_gallery" src="{% static 'images/template-gallery.jpg' %}" alt="">
+            <div>Alla Mallar</div>                
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakta oss</h2>
+    <p>Har du frågor eller vill du anlita oss? Skicka ett mail till <a href="mailto:info@snabbwebb.se">info@snabbwebb.se</a> eller ring oss på <strong>+46 70 123 45 67</strong>.</p>
+</section>
+
+{% endblock %}
