@@ -48,7 +48,6 @@ nav div .logo a span {
     font-size: 25px;
     transition: color 0.3s;
     font-family: Garamond, serif;
-    margin-left: 5px;
 }
 
 nav div .logo a span:hover {
@@ -89,7 +88,7 @@ header {
     text-align: center;
     align-items: center;
     padding: 3rem 1rem;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/images/background1.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/static/main/images/background1.jpg');
     background-size: cover; /* Makes the image cover the entire background */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent tiling */
@@ -143,7 +142,12 @@ section {
     flex-wrap: wrap; /* Allows wrapping if content overflows */
 }
 
-#services div div {
+#services div a{
+    color: white;
+    font-weight: 500;
+}
+
+#services div a div {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -157,24 +161,26 @@ section {
 
 }
 
-#services div div:hover {
+#services div a div:hover {
     background: rgba(0, 0, 0, 0.2); 
 }
 
-#services div div div {
+
+
+#services div a div div {
     height: 35vh; 
     width: 25vw; 
     border-radius: 0;
     padding: 0;
 }
 
-#services div div div img {
+#services div a div div img {
     width: 100%; 
     height: 100%; 
     border-radius: 8px;
 }
 
-#services div div div div {
+#services div a div div div {
     position: absolute;
     color: #f7f7f7;
     font-family: Garamond, serif;
@@ -185,11 +191,11 @@ section {
     transition: background 0.4s ease-in-out;
 }
 
-#services div div div div:hover {
+#services div a div div div:hover {
     background: rgba(0, 0, 0, 0.4); 
 }
 
-#services div div p {
+#services div a div p {
     color: #000;
     font-size: 1.2vw;
     font-weight: 500px;
@@ -200,6 +206,7 @@ section {
     background: radial-gradient(circle, #041e41, #072751); /* Dark gray to navy */
     color: #ffffff;
     text-align: center;
+    padding: 35px 50px;
 }
 
 #templates h2 {
@@ -213,11 +220,14 @@ section {
     display: flex;
     justify-content: center;
     gap: 5vw;
-    flex-wrap: wrap; /* Allows wrapping if content overflows */
+    flex-wrap: wrap; 
+    border-left: 2px solid #fff;
+    border-right: 2px solid #fff;
+    margin: 20px 0;
 }
 
 #templates div div {
-    height: 60vh; 
+    height: 55vh; 
     width: 18vw; 
     display: flex;
     justify-content: center;
@@ -225,16 +235,28 @@ section {
     border-radius: 20px;
 }
 
-#templates div div img {
+#templates div div a {
+    height: 100%; 
+    width: 100%; 
+    position: relative;
+    display: block; 
+    border-radius: 20px;
+}
+
+#templates div div a img {
     border-radius: 20px;
     height: 100%; 
     width: 100%; 
     object-fit: cover;
     border: #fff solid 3px;
+    filter: brightness(0.7);
 }
 
-#templates div div div {
+#templates div div a div {
     position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
     color: white;
     font-size: 2.5vw;    
     text-align: center;
@@ -242,15 +264,23 @@ section {
     opacity: 0; 
     border: #fff solid 5px;
     transition: opacity 0.4s ease-in-out;
+    margin: 0;
 }
 
-#templates div div div:hover {
+#templates div div a div:hover {
     opacity: 1; 
 }
 
 #contact {
     background-color: #333;
     color: #ffffff;
+}
+
+#contact h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    padding-left: 5vw;
 }
 
 /* Footer */
@@ -261,3 +291,129 @@ footer {
     padding: 1rem 0;
     font-size: 0.9rem;
 }
+
+/* services */ 
+
+#header-title {
+    background-color: #041e41;
+}
+
+#header-title h1 {
+    color: #fff;
+    text-align: center;
+    font-size: 4rem;
+    font-family: Garamond, serif;
+}
+
+#header-title hr {
+    border: none; 
+    border-top: 1px solid white; 
+    opacity: 1;
+    margin: 10px 0;
+}
+
+#basic-service {
+    background: radial-gradient(circle, #041e41, #072751); /* Dark gray to navy */
+    color: #fff;
+}
+
+#premium-service {
+    background: radial-gradient(circle, #cbc248, #977f30); /* Dark gray to navy */
+    color: #fff;
+    border-top: 5px solid #e1e1e1;
+    border-bottom: 5px solid #e1e1e1;
+}
+
+#technical-maintence {
+    background: radial-gradient(circle, #4c6585, #243854); /* Dark gray to navy */
+    color: #fff;
+}
+
+.service-display {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    text-align: center;   
+    padding: 70px 10vw;
+}
+
+.service-display div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+
+.service-display div h2 {
+    text-align: center;
+    font-size: 3.2vw;
+    font-family: Garamond, serif;
+    font-weight: 600;
+}
+
+.service-display div p {
+    text-align: left;
+    font-size: 1.4vw;
+    width: 40vw;
+    margin-top: 15px;
+    margin-bottom: 30px;
+}
+
+.service-display div h3 {
+    text-align: center;
+    font-size: 2.4vw;
+    font-weight: 600;
+    font-family: Garamond, serif;
+}
+
+.service-display img {
+    width: 30vw;
+    box-shadow: 0 0 25px #ffffff; 
+    border-radius: 20px;
+}
+
+/* contact */
+
+#contact-info {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2 ), rgba(0, 0, 0, 0.7)), url('/static/main/images/strangnas.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: calc(100vh - 8.8rem - 151px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+#contact-info div {
+    background: radial-gradient(circle, #8e8e8e, #6b6b6b);
+    height: 40vh;
+    width: 60vw;
+    padding: 3vh 3vw;
+    border-radius: 20px;
+    box-shadow: 0 0 60px 60px #0000002f; 
+    display: flex;
+    justify-content: space-between; 
+    flex-direction: column;
+}
+
+#contact-info div hr {
+    border: none; 
+    border-top: 1px solid white; 
+    opacity: 1;
+    margin: 10px 0;
+}
+
+#contact-info div div {
+    all: unset;
+}
+#contact-info div div p {
+    color: #fff;
+    font-size: clamp(1.5rem, 3.2vw, 1.8rem);
+    margin: 15px 0;
+}
+

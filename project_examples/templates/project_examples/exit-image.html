@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .top-left-image {
+            position: absolute;
+            top: 20px;
+            left: 3vw;
+            width: 100px; 
+            height: auto; 
+        }
+    </style>
+    {% block head %}{% endblock %}
+</head>
+<body>
+    <a href="/projekt">
+        <img src="{% static 'project_examples/images/logo-circle.png' %}" alt="Logo" class="top-left-image">
+    </a>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

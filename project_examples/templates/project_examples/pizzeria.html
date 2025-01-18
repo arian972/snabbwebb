@@ -1,0 +1,73 @@
+{% extends 'project_examples/exit-image.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Pizzeria Bella Italia</title>
+    <link rel="stylesheet" href="{% static 'project_examples/css/pizzeria-styles.css' %}">
+
+{% endblock %}
+
+{% block content %}
+
+    <header>
+        <div class="logo">
+            <h1>Pizzeria Bella Italia</h1>
+            <p>Den bästa pizzan i stan!</p>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="#menu">Meny</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- About Us Section -->
+    <section id="about" class="about-section">
+        <h2>Om Oss</h2>
+        <p>Välkommen till Pizzeria Bella Italia, där vi serverar äkta italiensk pizza med de bästa ingredienserna. Våra pizzor tillagas med kärlek och tradition, för att ge dig en fantastisk matupplevelse.</p>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu-section">
+        <h2>Meny</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="{% static 'project_examples/images/margherita.jpg' %}" alt="Margherita Pizza">
+                <h3>Margherita</h3>
+                <p>Tomatsås, mozzarella och basilika.</p>
+                <span>89 SEK</span>
+            </div>
+            <div class="menu-item">
+                <img src="{% static 'project_examples/images/pepperoni.jpg' %}" alt="Pepperoni Pizza">
+                <h3>Pepperoni</h3>
+                <p>Tomatsås, mozzarella och pepperoni.</p>
+                <span>99 SEK</span>
+            </div>
+            <div class="menu-item">
+                <img src="{% static 'project_examples/images/vegetariana.jpg' %}" alt="Vegetarisk Pizza">
+                <h3>Vegetariana</h3>
+                <p>Tomatsås, mozzarella, grönsaker och oliver.</p>
+                <span>95 SEK</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <h2>Kontakt</h2>
+        <p>Besök oss på:</p>
+        <address>
+            <p>Pizzeria Bella Italia</p>
+            <p>Gata 123, 12345 Stad</p>
+            <p>Telefon: 012-3456789</p>
+        </address>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Pizzeria Bella Italia. Alla rättigheter reserverade.</p>
+    </footer>
+
+{% endblock %}

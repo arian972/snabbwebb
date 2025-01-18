@@ -1,0 +1,48 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<section id="header-title">
+    <h1>Tjänster</h1>
+    <hr>
+</section>
+
+<section id="basic-service" class="service-display">
+    <div>
+        <h2>Enkel Tjänst</h2>
+        <p>Enkel Tjänst erbjuder en snabb och prisvärd webbsida med grundläggande funktioner, designad för småföretag som vill komma igång på nätet. Perfekt för företag som söker en enkel lösning med god användarupplevelse och responsiv design.</p>
+        <h3><i>499 SEK</i></h3>
+    </div>
+    
+    <img src="{% static 'main/images/basic-service.jpg' %}" alt="Enkel Tjänst">
+</section>
+
+<section id="premium-service" class="service-display">
+    <img src="{% static 'main/images/premium-service.png' %}" alt="Premium Tjänst">
+
+    <div>
+        <h2>Premium Tjänst</h2>
+        <p>Premium Tjänst ger en skräddarsydd webbsida med avancerade funktioner och unika designelement, anpassad för företag som vill skapa en stark, professionell digital närvaro. Här får du en exklusiv lösning med mer kontroll över funktionalitet och design.</p>
+        <h3><i>1 000 – 10 000 SEK</i></h3>
+    </div>
+</section>
+
+<section id="technical-maintence" class="service-display">
+    <div>
+        <h2>Teknisk underhåll</h2>
+        <p>Tekniskt Underhåll säkerställer att din webbsida alltid fungerar optimalt med regelbundna uppdateringar, säkerhetskopior och prestandaförbättringar. Vi tar hand om alla tekniska aspekter så att du kan fokusera på din verksamhet.</p>
+        <h3><i>500 – 2 500 SEK</i></h3>
+    </div>
+
+    <img src="{% static 'main/images/technical-help.png' %}" alt="Tekniskt Underhåll">
+</section>
+
+<section id="contact">
+    <h2>Kontakta oss</h2>
+    <p>Har du frågor eller vill du anlita oss? Skicka ett mail till <a href="mailto:snabbwebb.se@gmail.com">snabbwebb.se@gmail.com</a> eller ring oss på <strong>+49 79 079 03 61</strong>.</p>
+</section>
+
+{% endblock %}

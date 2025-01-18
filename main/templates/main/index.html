@@ -1,0 +1,82 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<header>
+    <img src="{% static 'main/images/logo-circle.png' %}" alt="SnabbWebb Logo">
+    <h1>Välkommen till SnabbWebb</h1>
+    <p>Vi bygger professionella och prisvärda hemsidor som hjälper ditt företag att lyckas online!</p>
+</header>
+
+<section id="services">
+    <hr>
+    <h2>Tjänster</h2>
+    <div>
+        <a href="{% url 'services' %}#basic-service">
+            <div>
+                <div>
+                    <img src="{% static 'main/images/basic-service.jpg' %}" alt="Enkel Tjänst">
+                    <div>Enkel Tjänst</div>                
+                </div>
+                <p>Enkel Tjänst erbjuder en snabb och prisvärd webbsida med grundläggande funktioner för småföretag.</p>                
+            </div>
+        </a>
+        
+        <a href="{% url 'services' %}#premium-service">
+            <div>
+                <div>
+                    <img src="{% static 'main/images/premium-service.png' %}" alt="Premium Tjänst">
+                    <div>Premium Tjänst</div>                
+                </div>
+                <p>Premium Tjänst erbjuder en skräddarsydd webbsida med avancerade funktioner för professionell närvaro.</p>                
+            </div>
+        </a>
+
+        <a href="{% url 'services' %}#technical-maintence">
+            <div>
+                <div>
+                    <img src="{% static 'main/images/technical-help.png' %}" alt="Tekniskt underhåll">
+                    <div>Tekniskt underhåll</div>                
+                </div>
+                <p>Tekniskt Underhåll säkerställer att din webbsida fungerar optimalt med uppdateringar och säkerhetskopior.</p>                      
+            </div>
+        </a>
+
+    </div>
+    <hr style="margin-top: 40px;">
+</section>
+
+<section id="templates">
+    <h2>Innovativa Projektexempel</h2>
+
+    <div>
+        <div>
+            <a href="{% url 'projects' %}">
+                <img src="{% static 'main/images/website1.png' %}" alt="">
+                <div>Webbsite</div>
+            </a>
+        </div>
+        <div>
+            <a href="{% url 'projects' %}">
+                <img src="{% static 'main/images/website2.png' %}" alt="">
+                <div>Webbsite</div>
+            </a>             
+        </div>
+        <div>
+            <a href="{% url 'projects' %}">
+                <img id="template_gallery" src="{% static 'main/images/template-gallery.jpg' %}" alt="">
+                <div>Alla Mallar</div>                    
+            </a>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Kontakta oss</h2>
+    <p>Har du frågor eller vill du anlita oss? Skicka ett mail till <a href="mailto:snabbwebb.se@gmail.com">snabbwebb.se@gmail.com</a> eller ring oss på <strong>+49 79 079 03 61</strong>.</p>
+</section>
+
+{% endblock %}

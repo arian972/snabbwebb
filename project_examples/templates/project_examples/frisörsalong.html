@@ -1,0 +1,95 @@
+{% extends 'project_examples/exit-image.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Frisörsalong Bella Capelli</title>
+    <link rel="stylesheet" href="{% static 'project_examples/css/frisörsalong-styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <header>
+        <div style="height: 120px;">
+            
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about">Om Oss</a></li>
+                <li><a href="#services">Tjänster</a></li>
+                <li><a href="#testimonials">Recensioner</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Välkommen till Bella Capelli Frisörsalong</h1>
+        <p>Professionell hårvård för alla. Från klippning till avancerad styling.</p>
+        <a href="#services" class="cta-button">Boka Tid Nu</a>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <h2>Om Oss</h2>
+            <p>Vi på Bella Capelli erbjuder exklusiv och personlig hårvård. Vårt team av erfarna frisörer är här för att ge dig den bästa upplevelsen och resultatet. Vi använder bara de bästa produkterna för att skapa friska och vackra hår.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="container">
+            <h2>Tjänster</h2>
+            <div class="services-list">
+                <div class="service-item">
+                    <h3>Klippning</h3>
+                    <p>Oavsett om du vill ha en enkel klippning eller en mer avancerad stil, har vi dig täckt.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Färgning</h3>
+                    <p>Våra experter hjälper dig att hitta den perfekta färgen för ditt hår.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Styling</h3>
+                    <p>Vi erbjuder professionell styling för alla tillfällen, från vardag till fest.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials">
+        <div class="container">
+            <h2>Recensioner</h2>
+            <div class="testimonial">
+                <p>"Jag är så nöjd med mitt nya hår! Frisörerna på Bella Capelli är otroligt duktiga och professionella."</p>
+                <cite>- Maria, nöjd kund</cite>
+            </div>
+            <div class="testimonial">
+                <p>"Jag älskar resultatet varje gång! Det känns verkligen som en personlig upplevelse varje gång jag går dit."</p>
+                <cite>- Johan, trogen kund</cite>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <h2>Kontakta Oss</h2>
+            <form action="#" method="POST">
+                <input type="text" name="name" placeholder="Ditt Namn" required>
+                <input type="email" name="email" placeholder="Din E-post" required>
+                <textarea name="message" placeholder="Meddelande" required></textarea>
+                <button type="submit" class="cta-button">Skicka Meddelande</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Bella Capelli. Alla rättigheter förbehållna.</p>
+        </div>
+    </footer>
+
+{% endblock %}
