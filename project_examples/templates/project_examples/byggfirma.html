@@ -1,0 +1,67 @@
+{% extends 'project_examples/exit-image.html' %}
+{% load static %}
+
+{% block head %}
+    <title>Byggfirma Excellence</title>
+    <link rel="stylesheet" href="{% static 'project_examples/css/byggfirma-styles.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="{% static 'project_examples/images/byggfirma-logo.jpg' %}" alt="Byggfirma Excellence">
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home">Hem</a></li>
+                <li><a href="#about">Om oss</a></li>
+                <li><a href="#services">Tjänster</a></li>
+                <li><a href="#contact">Kontakt</a></li>
+            </ul>
+        </nav>
+        <section class="hero">
+            <h1>Byggfirma Excellence</h1>
+            <p>Vi bygger din framtid, ett projekt i taget</p>
+        </section>
+    </header>
+
+    <section id="about">
+        <h2>Om oss</h2>
+        <p>Vi är ett pålitligt byggföretag med över 20 års erfarenhet. Vi erbjuder tjänster inom nybyggnation, renovering och ombyggnation. Vi jobbar med både privatpersoner och företag och ser till att alla projekt genomförs med högsta kvalitet och kundnöjdhet.</p>
+    </section>
+
+    <section id="services">
+        <h2>Tjänster</h2>
+        <div class="services-container">
+            <div class="service">
+                <h3>Nybyggnation</h3>
+                <p>Vi bygger skräddarsydda hus och kommersiella byggnader efter kundens behov och önskemål.</p>
+            </div>
+            <div class="service">
+                <h3>Renovering</h3>
+                <p>Renovera ditt hem eller kontor med hjälp av vårt expertteam. Vi förvandlar ditt utrymme till något nytt och funktionellt.</p>
+            </div>
+            <div class="service">
+                <h3>Ombyggnation</h3>
+                <p>Förändra din nuvarande byggnad med våra tjänster. Vi anpassar ytor och funktioner för att passa dina behov.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Kontakt</h2>
+        <p>Vill du komma i kontakt med oss? Fyll i formuläret nedan, eller ring oss direkt på 070-123 45 67.</p>
+        <form action="submit_form" method="POST">
+            <input type="text" name="name" placeholder="Ditt namn" required>
+            <input type="email" name="email" placeholder="Din e-post" required>
+            <textarea name="message" placeholder="Skriv ditt meddelande här..." required></textarea>
+            <button type="submit">Skicka</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Byggfirma Excellence | Alla rättigheter förbehållna</p>
+    </footer>
+
+{% endblock %}

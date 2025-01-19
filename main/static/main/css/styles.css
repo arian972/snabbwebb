@@ -158,13 +158,11 @@ section {
     background: rgba(0, 0, 0, 0.1); 
     border-radius: 10px;
     transition: background 0.4s ease-in-out;
-
 }
 
 #services div a div:hover {
     background: rgba(0, 0, 0, 0.2); 
 }
-
 
 
 #services div a div div {
@@ -411,9 +409,78 @@ footer {
 #contact-info div div {
     all: unset;
 }
+
 #contact-info div div p {
     color: #fff;
     font-size: clamp(1.5rem, 3.2vw, 1.8rem);
     margin: 15px 0;
 }
 
+/* Projects */
+
+#project-templates {
+    background: radial-gradient(circle, #041e41, #072751); /* Dark gray to navy */
+    color: #ffffff;
+    text-align: center;
+    padding: 35px 50px;
+}
+
+#project-templates h2 {
+    font-size: 4rem;
+    font-family: Garamond, serif;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+#project-templates div {
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+    flex-wrap: wrap; 
+    margin: 20px 0;
+}
+
+#project-templates div div {
+    height: 55vh; 
+    width: 18vw; 
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+#project-templates div div a {
+    height: 100%; 
+    width: 100%; 
+    position: relative;
+    display: block; 
+    border-radius: 20px;
+}
+
+#project-templates div div a img {
+    border-radius: 20px;
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover;
+    border: #fff solid 3px;
+    filter: brightness(0.7);
+}
+
+#project-templates div div a div {
+    position: absolute;
+    top: 50%;
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    color: white;
+    font-size: 2.5vw;    
+    text-align: center;
+    background: rgba(0, 0, 0, 0.7); 
+    opacity: 0; 
+    border: #fff solid 5px;
+    transition: opacity 0.4s ease-in-out;
+    margin: 0;
+}
+
+#project-templates div div a div:hover {
+    opacity: 1; 
+}
